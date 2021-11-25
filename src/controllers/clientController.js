@@ -1,6 +1,5 @@
 const loginControl = (request, response) => {
     const clientServices = require('../services/clientServices');
-
     let username = request.body.username;
     let password = request.body.password;
     if (!username || !password) {
@@ -34,9 +33,10 @@ const loginControl = (request, response) => {
 
 const registerControl = (request, response) => {
     const clientServices = require('../services/clientServices');
+    const Client = require('../models/entities.js').Client;
 
     let username = request.body.username;
-    let password = request.body.passwsord;
+    let password = request.body.password;
     let society = request.body.society;
     let contact = request.body.contact;
     let addres = request.body.addres;
